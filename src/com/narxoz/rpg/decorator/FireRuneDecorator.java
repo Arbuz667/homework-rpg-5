@@ -7,19 +7,16 @@ public class FireRuneDecorator extends ActionDecorator {
 
     @Override
     public String getActionName() {
-        // TODO: Decide how this decorator changes the visible action name.
-        return super.getActionName();
+        return super.getActionName() + " [Fire Rune]";
     }
 
     @Override
     public int getDamage() {
-        // TODO: Add fire-related behavior on top of wrapped damage.
-        return super.getDamage();
+        return (int) Math.round(super.getDamage() * 1.3);
     }
 
     @Override
     public String getEffectSummary() {
-        // TODO: Append or compose the fire effect description.
-        return super.getEffectSummary();
+        return super.getEffectSummary() + " + Fire(+30%)";
     }
 }
